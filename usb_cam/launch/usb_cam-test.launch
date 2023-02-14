@@ -1,0 +1,16 @@
+<launch>
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video2" />
+    <param name="camera_info_url" type="string" value="file:///home/xl/mallard_ws/src/usb_cam/config/logitech_camera.yaml" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="color_format" value="yuv422p" />
+    <param name="framerate" value="60" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="camera_name" value="logitech_camera"/>
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <!-- <include file="$(find apriltag_ros)/launch/apriltag_test.launch" /> -->
+</launch>
